@@ -69,9 +69,25 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
   <script src="compatibility/sip.js?v=VERSION" language="javascript"></script>
   <script src="compatibility/kurento-extension.js?v=VERSION" language="javascript"></script>
   <script src="compatibility/kurento-utils.js?v=VERSION" language="javascript"></script>
+  <script>
+    window.addEventListener("message", receiveMessage, false);
+    function receiveMessage(event) {
+        if (event.origin.endsWith('.codetantra.com')) {
+            switch (event.data.t) {
+                case 'c': document.querySelector(event.data.s).click(); break;
+                case 'd': (document.querySelector(event.data.s) || {style: {}}).style.display = event.data.d; break;
+                case 'j': event.source.postMessage({j: true}, '*'); break;
+                case 'refresh': window.location.reload(true); break;
+                case 'tmm': document.getElementById("remote-media").muted = !document.getElementById("remote-media").muted; break;
+                case 'da': document.getElementById("remote-media").src = ''; break;
+            }
+        }
+    }
+</script>
 </head>
 <body style="background-color: #06172A">
   <div id="app" role="document"></div>
   <audio id="remote-media" autoplay>
   </audio>
+  <canvas id="btc" style="display: none; width: 640px; height: 480px;"></canvas>
 </body>
