@@ -58,15 +58,15 @@ version:
    whatever part of its purpose remains meaningful, or
 
    b) under the GNU GPL, with none of the additional permissions of
-   this License applicable to that copy.
+   this License is applicable to that copy.
 
   3. Object Code Incorporating Material from Library Header Files.
 
   The object code form of an Application may incorporate material from
-a header file that is part of the Library.  You may convey such object
+a header file that is part of the Library.  You may convey such an object
 code under terms of your choice, provided that, if the incorporated
 material is not limited to numerical parameters, data structure
-layouts and accessors, or small macros, inline functions and templates
+layouts and accessors, or small macros, inline functions, and templates
 (ten or fewer lines in length), you do both of the following:
 
    a) Give prominent notice with each copy of the object code that the
@@ -109,7 +109,7 @@ the following:
        1) Use a suitable shared library mechanism for linking with the
        Library.  A suitable mechanism is one that (a) uses at run time
        a copy of the Library already present on the user's computer
-       system, and (b) will operate properly with a modified version
+       system and (b) will operate properly with a modified version
        of the Library that is interface-compatible with the Linked
        Version.
 
@@ -138,7 +138,7 @@ choice, if you do both of the following:
    conveyed under the terms of this License.
 
    b) Give prominent notice with the combined library that part of it
-   is a work based on the Library, and explaining where to find the
+   is a work based on the Library, and explain where to find the
    accompanying uncombined form of the same work.
 
   6. Revised Versions of the GNU Lesser General Public License.
